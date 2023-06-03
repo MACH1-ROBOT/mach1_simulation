@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>mach1_description</name>
+  <name>mach1_simulation</name>
   <version>1.0.0</version>
-<description>The mach1_description package</description>
+<description>The mach1_simulation package</description>
 
   <maintainer email="julianrendon514@gmail.com">Julian Rendon</maintainer>
   <license>MIT</license>
