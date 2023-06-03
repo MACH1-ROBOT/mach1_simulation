@@ -1,8 +1,8 @@
-# mach1_simulation ROS Package
+# Mach1 Simulation ROS Package
 
 ## Overview
 
-The `mach1_simulation` ROS package provides a 3D model and configuration files for the Mach1 robot. It enables visualization and simulation of the Mach1 robot in a ROS environment.
+The `mach1_simulation` ROS package provides a comprehensive simulation environment for the Mach1 robot. It includes a 3D model of the robot and configuration files that allow for visualization and simulation within the ROS (Robot Operating System) framework.
 
 ## Package Contents
 
@@ -14,14 +14,14 @@ The `mach1_simulation` ROS package provides a 3D model and configuration files f
 
 ## Installation
 
-To use Mach1 Navigation, you will need to have `ROS Noetic` installed on your system. You can install ROS by following the instructions on the official ROS website: http://wiki.ros.org/ROS/Installation.
+To use the Mach1 Simulation package, you will need to have ROS Noetic installed on your system. If you haven't installed ROS Noetic yet, you can follow the installation instructions on the official ROS website: http://wiki.ros.org/ROS/Installation.
 
-1. Install `ROS Noetic`.
-2. Create or use an existing ROS workspace.
+1. Install ROS Noetic.
+2. Create a new ROS workspace or use an existing one.
 3. Clone the `mach1_simulation` package into the `src/` directory of your workspace.
-4. Build the workspace with `catkin_make` or `catkin_build`.
-5. Launch the robot model using provided launch files, e.g., `roslaunch mach1_simulation display.launch`.
-6. Customize and extend the package to suit your requirements.
+4. Build the workspace using either `catkin_make` or `catkin_build` command.
+5. Launch the robot model using the provided launch files. For example, you can use the following command: `roslaunch mach1_simulation display.launch`.
+6. Customize and extend the package as per your requirements to further enhance the Mach1 simulation.
 
 ## License
 
