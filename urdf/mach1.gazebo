@@ -1,13 +1,16 @@
 <?xml version="1.0" ?>
 <robot name="mach1" xmlns:xacro="http://www.ros.org/wiki/xacro" >
 
-<xacro:property name="body_color" value="Gazebo/Silver" />
+<xacro:property name="SkyBlue"          value="Gazebo/SkyBlue"/>
+<xacro:property name="Grey"           value="Gazebo/Grey"/>
+<xacro:property name="Black"            value="Gazebo/Black"/>
+<xacro:property name="GreyTransparent"  value="Gazebo/GreyTransparent"/>
 
 <gazebo>
   <plugin name="control" filename="libgazebo_ros_control.so"/>
 </gazebo>
 <gazebo reference="base_link">
-  <material>${body_color}</material>
+  <material>${SkyBlue}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
@@ -15,105 +18,105 @@
 </gazebo>
 
 <gazebo reference="left_motor_link_1">
-  <material>${body_color}</material>
+  <material>${Grey}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="back_left_wheel_link_1">
-  <material>${body_color}</material>
+  <material>${Black}</material>
   <mu1>0.6</mu1>
   <mu2>0.6</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="right_motor_link_1">
-  <material>${body_color}</material>
+  <material>${Grey}</material>
   <mu1>100</mu1>
   <mu2>100</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="back_right_wheel_link_1">
-  <material>${body_color}</material>
+  <material>${Black}</material>
   <mu1>0.6</mu1>
   <mu2>0.6</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="left_axel_link_1">
-  <material>${body_color}</material>
+  <material>${Grey}</material>
   <mu1>100</mu1>
   <mu2>100</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="front_left_wheel_link_1">
-  <material>${body_color}</material>
+  <material>${Black}</material>
   <mu1>0.05</mu1>
   <mu2>0.05</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="right_axel_link_1">
-  <material>${body_color}</material>
+  <material>${Grey}</material>
   <mu1>100</mu1>
   <mu2>100</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="front_right_wheel_link_1">
-  <material>${body_color}</material>
+  <material>${Black}</material>
   <mu1>0.05</mu1>
   <mu2>0.05</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="lidar_link_1">
-  <material>${body_color}</material>
+  <material>${Black}</material>
   <mu1>100</mu1>
   <mu2>100</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="camera_link_1">
-  <material>${body_color}</material>
+  <material>${Black}</material>
   <mu1>100</mu1>
   <mu2>100</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="camera_servo_link_1">
-  <material>${body_color}</material>
+  <material>${Black}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="servo_connection_link_1">
-  <material>${body_color}</material>
+  <material>${Black}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="led_servo_link_1">
-  <material>${body_color}</material>
+  <material>${Black}</material>
   <mu1>0.2</mu1>
   <mu2>0.2</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="right_led_bulb_link_1">
-  <material>${body_color}</material>
+  <material>${GreyTransparent}</material>
   <mu1>100</mu1>
   <mu2>100</mu2>
   <selfCollide>true</selfCollide>
 </gazebo>
 
 <gazebo reference="left_led_bulb_link_1">
-  <material>${body_color}</material>
+  <material>${GreyTransparent}</material>
   <mu1>100</mu1>
   <mu2>100</mu2>
   <selfCollide>true</selfCollide>
@@ -164,7 +167,7 @@
 <gazebo reference="lidar_link_1">
   <sensor type="gpu_ray" name="head_hokuyo_sensor">
     <pose>0 0 0 0 0 0</pose>
-    <visualize>true</visualize>
+    <visualize>false</visualize>
     <update_rate>40</update_rate>
     <ray>
       <scan>
