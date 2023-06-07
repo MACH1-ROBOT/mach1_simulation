@@ -1,0 +1,441 @@
+<?xml version="1.0" ?>
+<robot name="mach1" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find mach1_simulation)/urdf/materials.xacro" />
+<xacro:include filename="$(find mach1_simulation)/urdf/mach1.trans" />
+<xacro:include filename="$(find mach1_simulation)/urdf/mach1.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.01257059513659561 -6.749337095876954e-06 0.05456277365767092" rpy="0 0 0"/>
+    <mass value="0.27796549982773394"/>
+    <inertia ixx="0.0007" iyy="0.001225" izz="0.001622" ixy="2e-06" iyz="-1e-06" ixz="0.000161"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mach1_simulation/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="bright_blue"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mach1_simulation/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_motor_link_1">
+  <inertial>
+    <origin xyz="-1.1673019370550541e-08 -0.023515437461306535 4.727200079990279e-08" rpy="0 0 0"/>
+    <mass value="0.26354923062867747"/>
+    <inertia ixx="8.2e-05" iyy="2.6e-05" izz="8.2e-05" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.098425 -0.063437 -0.022977" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mach1_simulation/meshes/left_motor_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.098425 -0.063437 -0.022977" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mach1_simulation/meshes/left_motor_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="back_left_wheel_link_1">
+  <inertial>
+    <origin xyz="-5.8024360941044684e-08 -0.007668076255200537 1.058822429039763e-09" rpy="0 0 0"/>
+    <mass value="0.022862762421987773"/>
+    <inertia ixx="5e-06" iyy="9e-06" izz="5e-06" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.098425 -0.085609 -0.022977" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mach1_simulation/meshes/back_left_wheel_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="light_black"/>
+  </visual>
+  <collision>
+    <origin xyz="0.098425 -0.085609 -0.022977" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mach1_simulation/meshes/back_left_wheel_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_motor_link_1">
+  <inertial>
+    <origin xyz="-1.1673019370550541e-08 0.025102437461306568 4.727200079990279e-08" rpy="0 0 0"/>
+    <mass value="0.26354923062867747"/>
+    <inertia ixx="8.2e-05" iyy="2.6e-05" izz="8.2e-05" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.098425 0.065024 -0.022977" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mach1_simulation/meshes/right_motor_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.098425 0.065024 -0.022977" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mach1_simulation/meshes/right_motor_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="back_right_wheel_link_1">
+  <inertial>
+    <origin xyz="-4.022446584150963e-09 0.007668057793591393 2.022708084359337e-09" rpy="0 0 0"/>
+    <mass value="0.02286234064013841"/>
+    <inertia ixx="5e-06" iyy="9e-06" izz="5e-06" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.098425 0.085609 -0.022977" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mach1_simulation/meshes/back_right_wheel_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="light_black"/>
+  </visual>
+  <collision>
+    <origin xyz="0.098425 0.085609 -0.022977" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mach1_simulation/meshes/back_right_wheel_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_axel_link_1">
+  <inertial>
+    <origin xyz="2.0695760315214695e-07 0.00912067298665084 8.381127491671747e-07" rpy="0 0 0"/>
+    <mass value="0.014864944426974978"/>
+    <inertia ixx="1e-06" iyy="0.0" izz="1e-06" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.098425 -0.063437 -0.022977" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mach1_simulation/meshes/left_axel_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.098425 -0.063437 -0.022977" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mach1_simulation/meshes/left_axel_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_left_wheel_link_1">
+  <inertial>
+    <origin xyz="-4.520254250073297e-08 -0.007668062103570364 -2.671110208019023e-08" rpy="0 0 0"/>
+    <mass value="0.02286192416725644"/>
+    <inertia ixx="5e-06" iyy="9e-06" izz="5e-06" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.098425 -0.085609 -0.022977" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mach1_simulation/meshes/front_left_wheel_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="light_black"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.098425 -0.085609 -0.022977" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mach1_simulation/meshes/front_left_wheel_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_axel_link_1">
+  <inertial>
+    <origin xyz="2.0695760313826916e-07 -0.009120672986650827 8.381127491637053e-07" rpy="0 0 0"/>
+    <mass value="0.014864944426974976"/>
+    <inertia ixx="1e-06" iyy="0.0" izz="1e-06" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.098425 0.063437 -0.022977" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mach1_simulation/meshes/right_axel_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.098425 0.063437 -0.022977" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mach1_simulation/meshes/right_axel_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_right_wheel_link_1">
+  <inertial>
+    <origin xyz="-4.815559548343451e-09 0.00766808105796124 -5.901404989683279e-10" rpy="0 0 0"/>
+    <mass value="0.02286228381417235"/>
+    <inertia ixx="5e-06" iyy="9e-06" izz="5e-06" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.098425 0.085609 -0.022977" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mach1_simulation/meshes/front_right_wheel_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="light_black"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.098425 0.085609 -0.022977" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mach1_simulation/meshes/front_right_wheel_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_link_1">
+  <inertial>
+    <origin xyz="-2.6784463419346483e-05 -1.8448607882002178e-06 0.00826050971110421" rpy="0 0 0"/>
+    <mass value="0.08969534212948989"/>
+    <inertia ixx="2.4e-05" iyy="2.4e-05" izz="4e-05" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.044673 -0.000242 -0.052698" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mach1_simulation/meshes/lidar_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="light_black"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.044673 -0.000242 -0.052698" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mach1_simulation/meshes/lidar_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="camera_link_1">
+  <inertial>
+    <origin xyz="0.0017247609899610633 -4.844296107829604e-08 -4.908169510264848e-07" rpy="0 0 0"/>
+    <mass value="0.0001446922327064572"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.052708 -0.010469 -0.148286" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mach1_simulation/meshes/camera_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="light_black"/>
+  </visual>
+  <collision>
+    <origin xyz="0.052708 -0.010469 -0.148286" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mach1_simulation/meshes/camera_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="camera_servo_link_1">
+  <inertial>
+    <origin xyz="7.875210781579933e-05 -0.013216489176342328 0.020116135219434145" rpy="0 0 0"/>
+    <mass value="0.0008288338046232635"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.055848 -0.022042 -0.120843" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mach1_simulation/meshes/camera_servo_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="light_black"/>
+  </visual>
+  <collision>
+    <origin xyz="0.055848 -0.022042 -0.120843" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mach1_simulation/meshes/camera_servo_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="servo_connection_link_1">
+  <inertial>
+    <origin xyz="1.4196507928943003e-06 0.005593295972367044 -1.0830995605948246e-07" rpy="0 0 0"/>
+    <mass value="0.00026402510298988033"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.055848 -0.010201 -0.120843" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mach1_simulation/meshes/servo_connection_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="light_black"/>
+  </visual>
+  <collision>
+    <origin xyz="0.055848 -0.010201 -0.120843" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mach1_simulation/meshes/servo_connection_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="led_servo_link_1">
+  <inertial>
+    <origin xyz="-0.0006249344811125879 0.004651981950430245 0.006942682838997669" rpy="0 0 0"/>
+    <mass value="0.0018204441194599923"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.059026 -0.004197 -0.111884" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mach1_simulation/meshes/led_servo_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="light_black"/>
+  </visual>
+  <collision>
+    <origin xyz="0.059026 -0.004197 -0.111884" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mach1_simulation/meshes/led_servo_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_led_bulb_link_1">
+  <inertial>
+    <origin xyz="0.0015254212710200526 -2.6323828997316945e-07 -5.000000026095242e-07" rpy="0 0 0"/>
+    <mass value="1.2830654939896124e-05"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.053914 0.005666 -0.112237" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mach1_simulation/meshes/right_led_bulb_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="clear"/>
+  </visual>
+  <collision>
+    <origin xyz="0.053914 0.005666 -0.112237" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mach1_simulation/meshes/right_led_bulb_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_led_bulb_link_1">
+  <inertial>
+    <origin xyz="0.001525449171436842 1.7538595697627613e-07 -5.000000021654349e-07" rpy="0 0 0"/>
+    <mass value="1.2836334343820447e-05"/>
+    <inertia ixx="0.0" iyy="0.0" izz="0.0" ixy="-0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.053914 -0.014193 -0.112237" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mach1_simulation/meshes/left_led_bulb_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="clear"/>
+  </visual>
+  <collision>
+    <origin xyz="0.053914 -0.014193 -0.112237" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://mach1_simulation/meshes/left_led_bulb_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="left_motor_joint" type="fixed">
+  <origin xyz="-0.098425 0.063437 0.022977" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="left_motor_link_1"/>
+</joint>
+
+<joint name="back_left_wheel_joint" type="continuous">
+  <origin xyz="0.0 0.022172 0.0" rpy="0 0 0"/>
+  <parent link="left_motor_link_1"/>
+  <child link="back_left_wheel_link_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="right_motor_joint" type="fixed">
+  <origin xyz="-0.098425 -0.065024 0.022977" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="right_motor_link_1"/>
+</joint>
+
+<joint name="back_right_wheel_joint" type="continuous">
+  <origin xyz="0.0 -0.020585 0.0" rpy="0 0 0"/>
+  <parent link="right_motor_link_1"/>
+  <child link="back_right_wheel_link_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="left_axel_joint" type="fixed">
+  <origin xyz="0.098425 0.063437 0.022977" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="left_axel_link_1"/>
+</joint>
+
+<joint name="front_left_wheel_joint" type="continuous">
+  <origin xyz="0.0 0.022172 0.0" rpy="0 0 0"/>
+  <parent link="left_axel_link_1"/>
+  <child link="front_left_wheel_link_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="right_axel_joint" type="fixed">
+  <origin xyz="0.098425 -0.063437 0.022977" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="right_axel_link_1"/>
+</joint>
+
+<joint name="front_right_wheel_joint" type="continuous">
+  <origin xyz="0.0 -0.022172 0.0" rpy="0 0 0"/>
+  <parent link="right_axel_link_1"/>
+  <child link="front_right_wheel_link_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="lidar_link_joint" type="fixed">
+  <origin xyz="0.044673 0.000242 0.052698" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="lidar_link_1"/>
+</joint>
+
+<joint name="camera_joint" type="fixed">
+  <origin xyz="0.00314 -0.011573 0.027443" rpy="0 0 0"/>
+  <parent link="camera_servo_link_1"/>
+  <child link="camera_link_1"/>
+</joint>
+
+<joint name="servo_connection_to_camera_joint" type="revolute">
+  <origin xyz="0.0 0.011841 0.0" rpy="0 0 0"/>
+  <parent link="servo_connection_link_1"/>
+  <child link="camera_servo_link_1"/>
+  <axis xyz="0.0 -1.0 -0.0"/>
+  <limit upper="1.134464" lower="-1.134464" effort="100" velocity="100"/>
+</joint>
+
+<joint name="led_to_servo_connection_joint" type="fixed">
+  <origin xyz="0.003178 0.006004 0.008959" rpy="0 0 0"/>
+  <parent link="led_servo_link_1"/>
+  <child link="servo_connection_link_1"/>
+</joint>
+
+<joint name="led_servo_joint" type="revolute">
+  <origin xyz="-0.059026 0.004197 0.111884" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="led_servo_link_1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="right_led_bulb_joint" type="fixed">
+  <origin xyz="0.005112 -0.009863 0.000353" rpy="0 0 0"/>
+  <parent link="led_servo_link_1"/>
+  <child link="right_led_bulb_link_1"/>
+</joint>
+
+<joint name="left_led_bulb_joint" type="fixed">
+  <origin xyz="0.005112 0.009996 0.000353" rpy="0 0 0"/>
+  <parent link="led_servo_link_1"/>
+  <child link="left_led_bulb_link_1"/>
+</joint>
+
+</robot>
